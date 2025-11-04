@@ -31,12 +31,12 @@ const Header = () => {
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
-              <Image src = "/public/assets/shared/icon-hamburger.svg" alt="Menu" width={16} height={15} />
+              <Image src = "/assets/shared/icon-hamburger.svg" alt="Menu" width={16} height={15} />
             </button>
 
             {/* Logo */}
             <Link href="/" onClick={closeMenu}>
-              <Image src="/public/assets/shared/logo.png" alt="Audiophile Logo" width={143} height={25} />
+              <Image src="/assets/shared/logo.png" alt="Audiophile Logo" width={143} height={25} />
             </Link>
           </div>
 
@@ -55,12 +55,12 @@ const Header = () => {
 
           {/* Cart */}
           <button aria-label="Cart">
-            <Image src="/public/assets/shared/icon-cart.svg" alt="Cart Icon" width={23} height={20} />
+            <Image src="/assets/shared/icon-cart.svg" alt="Cart Icon" width={23} height={20} />
           </button>
         </div>
 
         {/* Divider line (desktop only visible from logo to cart) */}
-        <div className="border-b border-white/10 w-full md:max-w-full" />
+        <div className="w-full border-b border-white/40 pb-6" />
       </div>
 
       {/* Dropdown Navigation (Mobile Only) */}
@@ -82,7 +82,12 @@ const Header = () => {
         </nav>
       )}
     </header>
+    
   );
 };
+
+{/* Divider line under header */}
+<div className="hidden md:block w-full border-t border-white/80 mt-6 mx-auto max-w-[1110px]" />
+
 
 export default Header;

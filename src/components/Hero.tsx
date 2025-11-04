@@ -1,46 +1,40 @@
-// src/components/Hero.tsx
-
 import Image from "next/image";
+//import heroBg from "@/public/assets/home/desktop/image-hero.jpg"; // full background image
 
 const Hero = () => {
   return (
-    <section className="relative w-full bg-black overflow-hidden">
-      {/* Hero Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/assets/home/hero-full.png"
-           alt="XX99 Mark II Headphones"
-            fill
-            className="object-cover object-center md:object-[80%_center]"
-            priority
-        />
-      </div>
+    <section className="relative w-full h-[730px] text-white overflow-hidden">
+      {/* Background image */}
+       <Image
+        src="/assets/home/hero-full.png"
+        alt="Hero Background"
+        fill
+        className="object-cover object-center opacity-80"
+        priority
+      />
 
-      {/* Hero Content */}
-      <div className="relative z-10 max-w-[1110px] mx-auto px-6 py-32 md:py-40 text-white flex flex-col items-center md:items-start md:flex-row md:justify-between">
+      {/* Optional black overlay for contrast */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
 
-        {/* Text Content */}
-        <div className="text-center md:text-left md:max-w-[398px] space-y-6">
-          <p className="tracking-[10px] text-sm text-neutral-400">NEW PRODUCT</p>
-          <h1 className="text-4xl sm:text-5xl md:text-[56px] font-bold uppercase leading-tight">
-            XX99 Mark II <br /> Headphones
-          </h1>
-          <p className="text-neutral-400 text-base sm:text-lg leading-relaxed">
-            Experience natural, lifelike audio and exceptional build quality
-            made for the passionate music enthusiast.
-          </p>
-
-          {/* CTA Button */}
-          <button className="bg-[#D87D4A] hover:bg-[#FBAF85] transition text-white text-sm font-bold tracking-[1px] uppercase px-8 py-4 mt-4">
-            See Product
-          </button>
-        </div>
+      {/* Text Content */}
+      <div className="relative z-20 h-full max-w-screen-xl mx-auto px-6 flex flex-col justify-center items-center text-center md:items-start md:text-left">
+        <p className="text-sm tracking-[10px] text-white/60 mb-4">
+          NEW PRODUCT
+        </p>
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          XX99 MARK II <br /> HEADPHONES
+        </h1>
+        <p className="text-white/80 max-w-md mb-8">
+          Experience natural, lifelike audio and exceptional build quality made
+          for the passionate music enthusiast.
+        </p>
+        <button className="bg-orange-500 hover:bg-orange-400 px-8 py-4 uppercase text-white tracking-widest font-semibold">
+          See Product
+        </button>
       </div>
     </section>
   );
 };
 
 export default Hero;
-
-
 
