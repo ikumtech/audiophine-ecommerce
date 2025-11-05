@@ -1,3 +1,4 @@
+// components/home/Zx9Highlight.tsx
 'use client';
 
 import Image from 'next/image';
@@ -8,8 +9,6 @@ export default function Zx9Highlight() {
     <section className="py-20">
       <div className="max-w-[1110px] mx-auto px-6">
         <div className="bg-primary rounded-lg overflow-hidden flex flex-col lg:flex-row items-center px-10 lg:px-20 py-14 text-white relative">
-          
-          {/* Product Image */}
           <div className="mb-10 lg:mb-0 lg:mr-16">
             <Image
               src="/assets/home/desktop/image-speaker-zx9.png"
@@ -20,7 +19,6 @@ export default function Zx9Highlight() {
             />
           </div>
 
-          {/* Text Content */}
           <div className="text-center lg:text-left max-w-md">
             <h2 className="uppercase text-[40px] md:text-[56px] font-bold leading-tight">
               ZX9 <br /> Speaker
@@ -28,14 +26,16 @@ export default function Zx9Highlight() {
             <p className="mt-6 mb-10 text-white/75 text-base leading-relaxed">
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
             </p>
-            <Link href="/product/zx9-speaker">
-              <button className="bg-black hover:bg-dark text-white uppercase text-sm tracking-wider px-6 py-4 font-bold">
+
+            <Link
+                href="/product/zx9-speaker"
+                className="inline-block bg-orange-500 text-white px-6 py-3 uppercase text-sm hover:bg-orange-400 transition"
+              >
                 See Product
-              </button>
-            </Link>
+              </Link>
           </div>
 
-          {/* Decorative Circles */}
+          {/* Decorative Circle */}
           <div className="absolute inset-0">
             <Image
               src="/assets/home/desktop/Oval.png"

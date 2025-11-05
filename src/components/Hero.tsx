@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 //import heroBg from "@/public/assets/home/desktop/image-hero.jpg"; // full background image
 
 const Hero = () => {
@@ -28,9 +29,11 @@ const Hero = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button className="bg-orange-500 hover:bg-orange-400 px-8 py-4 uppercase text-white tracking-widest font-semibold">
-          See Product
-        </button>
+       <Link href="/product/xx99-mark-two">
+            <button className="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3 uppercase tracking-wider text-sm">
+              See Product
+            </button>
+        </Link>
       </div>
     </section>
   );
